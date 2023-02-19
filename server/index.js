@@ -41,6 +41,11 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
+app.get('/check/deploy',(req,res) => {
+    res.status(200).json({
+        message: 'deployed succcess fully'
+    })
+})
 
 /* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register);
