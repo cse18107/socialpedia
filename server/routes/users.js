@@ -1,10 +1,10 @@
-import express from "express";
-import {
+const express = require("express");
+const {
   getUser,
   getUserFriends,
   addRemoveFriend,
-} from "../controllers/users.js";
-import { verifyToken } from "../middleware/auth.js";
+} = require("../controllers/users.js");
+const { verifyToken } = require("../middleware/auth.js");
 
 const router = express.Router();
 

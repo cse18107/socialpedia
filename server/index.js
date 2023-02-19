@@ -1,19 +1,19 @@
-import express from "express";
-import bodyParser from "body-parser";
-import mongoose from "mongoose";
-import cors from "cors";
-import dotenv from "dotenv";
-import multer from "multer";
-import helmet from "helmet";
-import morgan from "morgan";
-import path from "path";
-import { fileURLToPath } from "url";
-import authRoutes from "./routes/auth.js";
-import userRoutes from "./routes/users.js";
-import postRoutes from "./routes/posts.js";
-import { register } from "./controllers/auth.js";
-import { verifyToken } from "./middleware/auth.js";
-import { createPost } from "./controllers/posts.js";
+const express = require("express") ;
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const multer = require("multer");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const path = require("path");
+const { fileURLToPath } = require("url");
+const authRoutes = require("./routes/auth.js");
+const userRoutes = require("./routes/users.js");
+const postRoutes = require("./routes/posts.js");
+const { register } = require("./controllers/auth.js");
+const { verifyToken } = require("./middleware/auth.js");
+const { createPost } = require("./controllers/posts.js");
 
 
 /* CONFIGURATIONS */
